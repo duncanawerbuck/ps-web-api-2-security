@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Principal;
 using System.Threading.Tasks;
 using Microsoft.Owin;
 
@@ -18,6 +19,8 @@ namespace SecurityPipeline.Pipeline
         public async Task Invoke(IDictionary<string, object> env)
         {
             var context = new OwinContext(env);
+
+            context.Request.User = new GenericPrincipal(new GenericIdentity("dude"), new string[] {});
 
             Helper.Write("Middleware", context.Request.User);
 
