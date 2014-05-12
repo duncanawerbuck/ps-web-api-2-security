@@ -8,6 +8,7 @@ using SecurityPipeline.Pipeline;
 namespace SecurityPipeline
 {
     [TestAuthenticationFilter]
+    [TestAuthorizationFilter]
     public class TestController : ApiController
     {
         public IHttpActionResult Get()
