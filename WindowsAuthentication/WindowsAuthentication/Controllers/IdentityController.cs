@@ -4,11 +4,11 @@ using System.Linq;
 using System.Security.Claims;
 using System.Web;
 using System.Web.Http;
-using System.Web.Mvc;
 using WindowsAuthentication.Models;
 
 namespace WindowsAuthentication.Controllers
 {
+    [Authorize]
     public class IdentityController : ApiController
     {
         public IEnumerable<ViewClaim> Get()

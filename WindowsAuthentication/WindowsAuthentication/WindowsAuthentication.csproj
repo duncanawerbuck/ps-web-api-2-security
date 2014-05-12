@@ -135,6 +135,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\IdentityController.cs" />
+    <Compile Include="Middleware\ClaimsTransformationMiddleware.cs" />
+    <Compile Include="Middleware\ClaimsTransformationMiddlewareExtensions.cs" />
+    <Compile Include="Middleware\ClaimsTransformationOptions.cs" />
     <Compile Include="Models\ViewClaim.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
