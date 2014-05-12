@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
+using SecurityPipeline.Pipeline;
 
 namespace SecurityPipeline
 {
+    [TestAuthenticationFilter]
     public class TestController : ApiController
     {
         public IHttpActionResult Get()
